@@ -1,5 +1,4 @@
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 body {
@@ -38,8 +37,6 @@ a, a:hover, a:focus {
   font-size: 20px;
   font-weight: 700;
   color: #ffffff;
-  -webkit-transition: background 0.5s ease;
-  -o-transition: background 0.5s ease;
   transition: background 0.5s ease; }
   .button:hover {
     background: #5faee3; }
@@ -115,7 +112,7 @@ a, a:hover, a:focus {
       margin: 0 30px;
       color: #2c3e50;
       display: inline-block;
-      width: 280px; }
+      width: 290px; }
       .image-list ul li .wrapper-img {
         overflow: hidden;
         width: 250px;
@@ -123,6 +120,7 @@ a, a:hover, a:focus {
         margin: 0 auto;
         border-radius: 50%; }
       .image-list ul li span {
+        display: inline-block;
         font-size: 20px;
         font-weight: 700; }
 
@@ -202,6 +200,8 @@ footer {
   padding-top: 15px;
   background: #2c3e50;
   color: #ecf0f1; }
+  footer .logo {
+    margin-top: 15px; }
   footer nav {
     float: right; }
     footer nav li {
