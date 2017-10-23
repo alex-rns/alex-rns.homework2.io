@@ -1,4 +1,5 @@
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 body {
@@ -9,6 +10,9 @@ body {
   font-family: Raleway, sans-serif;
   background-color: #ecf0f1;
   text-transform: uppercase; }
+
+section {
+  padding: 50px 0; }
 
 header {
   padding-top: 20px; }
@@ -37,6 +41,8 @@ a, a:hover, a:focus {
   font-size: 20px;
   font-weight: 700;
   color: #ffffff;
+  -webkit-transition: background 0.5s ease;
+  -o-transition: background 0.5s ease;
   transition: background 0.5s ease; }
   .button:hover {
     background: #5faee3; }
@@ -46,8 +52,7 @@ a, a:hover, a:focus {
 .overflow {
   overflow: hidden; }
 
-.wrapper-section {
-  padding: 50px 0;
+.container {
   width: 1170px;
   margin: 0 auto;
   text-align: center; }
@@ -55,6 +60,9 @@ a, a:hover, a:focus {
 /*====================WELCOME-SECTION==================*/
 .logo {
   float: left; }
+  .logo + h1 {
+    display: inline-block;
+    text-indent: -9999px; }
 
 .welcome-section {
   background: #3498db;
@@ -66,14 +74,15 @@ a, a:hover, a:focus {
     width: 40px;
     background: url("../img/burger.png") no-repeat;
     float: right; }
-  .welcome-section .welcome {
-    padding: 160px 0 250px 0; }
-    .welcome-section .welcome h1 {
+  .welcome-section .welcome-message {
+    font-size: 40px;
+    font-weight: 500;
+    padding: 160px 0 300px 0; }
+    .welcome-section .welcome-message p {
       font-size: 60px;
-      margin-top: 0; }
-    .welcome-section .welcome h2 {
-      font-size: 86px;
-      margin-bottom: 0; }
+      margin: 0; }
+    .welcome-section .welcome-message span {
+      font-size: 86px; }
 
 /*====================ABOUT-SECTION==================*/
 .about-section {
@@ -91,12 +100,13 @@ a, a:hover, a:focus {
     font-size: 40px;
     padding-top: 15px;
     margin-bottom: 10px; }
-  .info-card .cross {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    background: url("../img/cross.png") no-repeat;
-    margin-bottom: 20px; }
+    .info-card h2::after {
+      content: "";
+      background: url("../img/cross.png") no-repeat;
+      width: 35px;
+      height: 35px;
+      display: block;
+      margin: 20px auto; }
   .info-card p {
     font-weight: 500;
     max-width: 750px;
@@ -154,14 +164,16 @@ a, a:hover, a:focus {
 .clients-section {
   background-color: #9b59b6;
   color: #ecf0f1;
-  padding-top: 300px; }
+  padding-top: 350px; }
 
 .clients-list li {
   margin: 0 10px;
   display: inline-block;
   vertical-align: middle;
   width: 250px;
+  -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease; }
   .clients-list li:hover {
@@ -186,7 +198,9 @@ a, a:hover, a:focus {
   text-align: left;
   display: inline-block;
   background: url("../img/social-sprite.png") no-repeat;
+  -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease; }
   .facebook-social:hover, .google-social:hover, .twitter-social:hover {
@@ -211,7 +225,7 @@ a, a:hover, a:focus {
 
 /*====================TEAM-SECTION==================*/
 footer {
-  padding-top: 15px;
+  padding: 50px 0;
   background: #2c3e50;
   color: #ecf0f1; }
   footer .logo {
@@ -222,6 +236,8 @@ footer {
       margin: 0 15px;
       display: inline-block; }
       footer nav li a {
+        -webkit-transition: opacity 0.4s ease;
+        -o-transition: opacity 0.4s ease;
         transition: opacity 0.4s ease; }
       footer nav li:hover {
         opacity: 0.5; }

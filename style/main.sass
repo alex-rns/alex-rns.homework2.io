@@ -15,6 +15,8 @@ body
   font-family: Raleway, sans-serif
   background-color: $bg-col
   text-transform: uppercase
+section
+  padding: 50px 0
 header
   padding-top: 20px
   h2
@@ -47,14 +49,16 @@ a, a:hover, a:focus
     background: darken($blue, 10%)
 .overflow
   overflow: hidden
-.wrapper-section
-  padding: 50px 0
+.container
   width: 1170px
   margin: 0 auto
   text-align: center
 /*====================WELCOME-SECTION==================*/
 .logo
   float: left
+  + h1
+    display: inline-block
+    text-indent: -9999px
 .welcome-section
   background: $blue
   color: #ecf0f1
@@ -65,14 +69,15 @@ a, a:hover, a:focus
     width: 40px
     background: url("../img/burger.png") no-repeat
     float: right
-  .welcome
-    padding: 160px 0 250px 0
-    h1
+  .welcome-message
+    font-size: 40px
+    font-weight: 500
+    padding: 160px 0 300px 0
+    p
       font-size: 60px
-      margin-top: 0
-    h2
+      margin: 0
+    span
       font-size: 86px
-      margin-bottom: 0
 /*====================ABOUT-SECTION==================*/
 .about-section
   color: #000
@@ -88,12 +93,20 @@ a, a:hover, a:focus
     font-size: 40px
     padding-top: 15px
     margin-bottom: 10px
-  .cross
-    display: inline-block
-    width: 35px
-    height: 35px
-    background: url("../img/cross.png") no-repeat
-    margin-bottom: 20px
+
+    &::after
+      content: ""
+      background: url("../img/cross.png") no-repeat
+      width: 35px
+      height: 35px
+      display: block
+      margin: 20px auto
+  //.cross
+  //  display: inline-block
+  //  width: 35px
+  //  height: 35px
+  //  background: url("../img/cross.png") no-repeat
+  //  margin-bottom: 20px
   p
     font-weight: 500
     max-width: 750px
@@ -147,7 +160,7 @@ a, a:hover, a:focus
 .clients-section
   background-color: $purple
   color: #ecf0f1
-  padding-top: 300px
+  padding-top: 350px
 .clients-list
   li
     margin: 0 10px
@@ -191,7 +204,7 @@ a, a:hover, a:focus
   height: 34px
 /*====================TEAM-SECTION==================*/
 footer
-  padding-top: 15px
+  padding: 50px 0
   background: $grey
   color: #ecf0f1
   .logo
